@@ -103,8 +103,19 @@ class LinkedList(object):
             Exception: List not long enough
         """
 
-
-        print self.data
+        current = self.head # Initialise
+        count = 0 # Index of current node
+ 
+        # Loop while end of linked list is not reached
+    
+        while current is not None:
+            if count == idx:
+                return current
+            count += 1
+            
+            if not current.next:
+                raise Exception("List not long enough")
+            current = current.next
 
 
 
