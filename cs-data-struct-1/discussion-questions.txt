@@ -1,0 +1,119 @@
+"""Discussion Questions"""
+
+"""Runtime"""
+
+QUESTION:
+When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+
+RESPONSE:
+The workload of figuring out whether the box of animal crackers contains an elephant is determined by the number of operations in the code to find the elephant cracker; the runtime would be O(n).
+
+
+
+QUESTION:
+Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
+O(log n)
+O(n^2)
+O(n log n)
+O(n)
+O(2^n)
+O(1)
+(Hint: to write exponents in a text file, use a carrot, like so: n^2 or 2^n.)
+
+RESPONSE:
+O(1) -         Constant Time
+O(n) -         Linear Time
+O(n^2) -       Quadratic Time
+O(log n) -     Logarithmic Time
+O(n log n) -   Linearithmic Time
+O(2^n) -       Exponential Time
+O(n!) -        Factorial Time
+
+
+
+"""Stacks and Queues"""
+
+QUESTION:
+In the following cases, would a stack or queue be a more appropriate data structure?
+
+    QUESTION:
+    The process of loading and unloading pallets onto a flatbed truck
+    
+    RESPONSE:
+    Stack
+
+    QUESTION:
+    Putting bottle caps on bottles of beer as they roll down an assembly line
+
+    RESPONSE:
+    Queue
+
+    QUESTION:
+    Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2)
+
+    RESPONSE:
+    Stack
+
+
+QUESTION:    
+Describe two more situations where a queue would be an appropriate data structure.
+
+RESPONSE:
+Two situations where a queue would be an appropriate data structure would be a task list or the waiting line at a grocery store.
+
+QUESTION:
+Describe two more situations where a stack would be an appropriate data structure.
+
+RESPONSE:
+Two situations where a stack would be an appropriate data structure would be eating pancakes or the back button in a web browser.
+
+
+
+"""Linked List"""
+
+QUESTION:
+Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+
+RESPONSE:
+The nodes of this linked list are the row of boxes below the head; the units of the linked list. The data of each of the three nodes are the text within the boxes: "Apple", "Berry", "Cherry". The arrows refer to what the node is referencing. For example, the "head" of the linked list is referencing the first node, which contains the data "Apple", and the "tail" would be the last node before "None", which contains the data "Cherry".
+
+
+QUESTION:
+What’s the difference between doubly- and singly-linked lists?
+
+RESPONSE:
+Singly-linked list only go in one direction and its nodes have only the "Next" attribute; doubly-linked lists can traverse in more than one direction and have nodes that contain a "Previous" attribute that would reference the previous node.
+
+
+QUESTION:
+Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+
+RESPONSE:
+It is faster to append to a linked list if we keep track of the tail as an attribute because we won't have to traverse the entire list from the beginning every time we wanted to add or remove a node. We could simply reassign the head/tail nodes to reference the updated node.
+
+
+
+"""Trees"""
+
+QUESTION:
+Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burritos (starting at food)? (Assume nodes are enqueued in left-to-right order.) Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+RESPONSE:
+BFS:    food -> Italian -> Indian -> Mexican - > lasagna -> pizza ->
+        tikka masala -> saag -> burritos.
+
+
+QUESTION:
+Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? (Assume nodes are pushed in left-to-right order.) Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+RESPONSE:
+DFS:    food -> Mexican -> enchiladas -> tacos -> burritos ->
+        Indian -> saag -> tikka masala -> Italian -> pizza ->
+        Sicilian -> New York-style -> Chicago-style.
+
+
+QUESTION:
+How is a binary search tree different from other trees?
+
+RESPONSE:
+A binary search tree is different from other trees in that each node always has both a left and a right child, and it has a "rule" for arrangement that is often used for very fast searching.
