@@ -5,7 +5,13 @@ class Node(object):
     """Node in a tree."""
 
     def __init__(self, data, children=None):
+
+        # If children is None, it will be False, and this will make the
+        # logical expression move to the other part of the "or".
+        # Guarantees and empty list will be created each time an instance 
+        # is created.
         children = children or []
+        
         assert isinstance(children, list), \
             "children must be a list!"
         self.data = data
@@ -26,9 +32,7 @@ class Node(object):
             2
         """
 
-        # FIXME
-
-        pass
+        return len(self.children)
 
 
 class Tree(object):
@@ -93,8 +97,17 @@ class Tree(object):
 
         """
 
-        # FIXME
-        pass
+        to_visit = [self.root]
+
+        while to_visit:
+            current = to_visit.pop(0)
+
+            if current.data == data:
+                return current
+
+            to_visit.extend(current.children)
+
+
 
 if __name__ == "__main__":
     import doctest
